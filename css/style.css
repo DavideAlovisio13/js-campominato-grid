@@ -8,3 +8,29 @@ html {
     scroll-behavior: smooth;
     font-family: "Josefin Sans", sans-serif;;
 }
+
+.grid {
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+}
+.playcell {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-style: inset;
+    border: 1px solid white;
+}
+p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+
+nav, footer {
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

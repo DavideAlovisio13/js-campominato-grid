@@ -22,14 +22,12 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 const genBtn = document.querySelector('.btn');
 const divCont = document.getElementById('contgrid');
-const playGrid = document.createElement('div');
-divCont.appendChild(playGrid);
 console.log(divCont);
 
 function createNewCell(element) {
     const playCells = document.createElement('div');
     playCells.className = ('playcell');
-    playGrid.append(playCells);
+    divCont.append(playCells);
     return playCells;
 }
 
