@@ -8,6 +8,7 @@
 html {
   scroll-behavior: smooth;
   font-family: "Josefin Sans", sans-serif;
+  overflow-y: hidden;
 }
 
 body{

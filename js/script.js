@@ -19,17 +19,20 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 :laptop_parrot: :laptop_parrot: Buon lavoro a tutte e a tutti! 
 
 */
-
+// dichiaro le variabili che mi interessano...
 const genBtn = document.querySelector('.btn');
 const divCont = document.getElementById('contgrid');
 console.log(divCont);
 
 genBtn.addEventListener('click', function () {
+    // variabile reset
     divCont.innerHTML = '';
+    // variabili relative alla selezione della difficoltà
     let inpuSelect = document.getElementById("difficulty");
     let indexSelect = inpuSelect.selectedIndex;
     let valueSel = inpuSelect.options[indexSelect];
     let innerOptVal = parseInt(valueSel.value);
+    // ciclo per inserire le celle di gioco all'interno del contenitore principale e i numeri all'interno delle celle
     for (let x = 0; x < innerOptVal; x++) {
         let newPlayCells = createNewCell(x + 1);
         const textCells = document.createElement('p');
@@ -37,10 +40,13 @@ genBtn.addEventListener('click', function () {
         textCells.className = ('number')
         newPlayCells.append(textCells);
         textCells.append(numbers);
+        // se il valore di difficoltà selezionato è ....
         if (innerOptVal === 100) {
             newPlayCells.classList.add('cell-size100');
+            // invece se ......
         } else if (innerOptVal === 81) {
             newPlayCells.classList.add('cell-size81');
+            // altrimenti....
         } else {
             newPlayCells.classList.add('cell-size49');
         }
@@ -54,7 +60,7 @@ genBtn.addEventListener('click', function () {
         });
 
     }
-
+    // funzione per la divisione x 3, 5 e 15
     function divNum(number) {
         if (number % 5 === 0) {
             return true;
@@ -66,7 +72,7 @@ genBtn.addEventListener('click', function () {
             return false;
         }
     }
-
+    // funzione per generare la prima cella 
     function createNewCell(element) {
         const playCells = document.createElement('div');
         playCells.className = ('playcell opacity-transition scale');
