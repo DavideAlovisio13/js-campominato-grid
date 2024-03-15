@@ -19,15 +19,21 @@
 </head>
 
 <body>
-    <nav class="d-flex align-items-center justify-content-between">
+    <nav class="d-flex align-items-center justify-content-between bg-white shadow-sm">
         <h1>Campominato</h1>
         <button type="button" class="btn btn-primary">
-            Genera 
+            Genera
         </button>
+        <select class="form-select form-select-lg" name="" id="difficulty">
+            <option selected>Difficoltà</option>
+            <option value="100">Livello 1 (100 <i class="fa-regular fa-square"></i>)</option>
+            <option value="81">livello 2 (81 <i class="fa-regular fa-square"></i>)</option>
+            <option value="49">livello 3 (49 <i class="fa-regular fa-square"></i>)</option>
+        </select>
     </nav>
-    <div class="grid bg-secondary d-flex flex-wrap align-items-center justify-content-center" id="contgrid">
+    <div class="grid d-flex flex-wrap align-items-center justify-content-center" id="contgrid">
     </div>
-    <footer class="d-flex align-items-center justify-content-start">
+    <footer class="d-flex align-items-center justify-content-start bg-white">
         <div>
             <p>Made with &hearts; by <a href="">Boolean</a></p>
         </div>

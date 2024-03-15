@@ -24,19 +24,54 @@ const genBtn = document.querySelector('.btn');
 const divCont = document.getElementById('contgrid');
 console.log(divCont);
 
-function createNewCell(element) {
-    const playCells = document.createElement('div');
-    playCells.className = ('playcell');
-    divCont.append(playCells);
-    return playCells;
-}
+genBtn.addEventListener('click', function () {
+    divCont.innerHTML = '';
+    let inpuSelect = document.getElementById("difficulty");
+    let indexSelect = inpuSelect.selectedIndex;
+    let valueSel = inpuSelect.options[indexSelect];
+    let innerOptVal = parseInt(valueSel.value);
+    for (let x = 0; x < innerOptVal; x++) {
+        let newPlayCells = createNewCell(x + 1);
+        const textCells = document.createElement('p');
+        let numbers = x + 1;
+        textCells.className = ('number')
+        newPlayCells.append(textCells);
+        textCells.append(numbers);
+        if (innerOptVal === 100) {
+            newPlayCells.classList.add('cell-size100');
+        } else if (innerOptVal === 81) {
+            newPlayCells.classList.add('cell-size81');
+        } else {
+            newPlayCells.classList.add('cell-size49');
+        }
+        newPlayCells.addEventListener('click', function () {
+            if (divNum(x + 1)) {
+                newPlayCells.classList.add('press');
+            } else {
+                textCells.classList.add('d-none');
+                newPlayCells.classList.add('press_none');
+            }
+        });
 
-for (let x = 0; x < 100; x++) {
-    let newPlayCells = createNewCell(x + 1);
-    const textCells = document.createElement('p');
-    let numbers = x + 1;
-    textCells.className = ('number')
-    newPlayCells.append(textCells);
-    textCells.append(numbers);
-}
+    }
+
+    function divNum(number) {
+        if (number % 5 === 0) {
+            return true;
+        } else if (number % 3 === 0) {
+            return true;
+        } else if (number % 15 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function createNewCell(element) {
+        const playCells = document.createElement('div');
+        playCells.className = ('playcell opacity-transition scale');
+        divCont.append(playCells);
+        return playCells;
+    }
+});
 
