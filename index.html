@@ -14,22 +14,25 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/animation-style.css">
+    <link rel="stylesheet" href="css/alt-style.css">
     <title>Campo Minato</title>
 </head>
 
 <body>
     <nav class="d-flex align-items-center justify-content-between bg-white shadow-sm">
         <h1>Campominato</h1>
-        <button type="button" class="btn btn-primary">
-            Genera
-        </button>
-        <select class="form-select form-select-lg w-25 " name="" id="difficulty">
-            <option selected>Difficoltà</option>
-            <option value="100">Livello 1 (100 <i class="fa-regular fa-square"></i>)</option>
-            <option value="81">livello 2 (81 <i class="fa-regular fa-square"></i>)</option>
-            <option value="49">livello 3 (49 <i class="fa-regular fa-square"></i>)</option>
-        </select>
+        <div class="justify-content-center align-items-center d-flex">
+            <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center mx-3">
+                Genera
+            </button>
+            <select class="form-select form-select-lg " name="select" id="difficulty">
+                <option selected>Difficoltà</option>
+                <option value="100">Livello 1 (10x10)</option>
+                <option value="81">livello 2 (9x9)</option>
+                <option value="49">livello 3 (7x7)</option>
+            </select>
+        </div>
     </nav>
     <div class="grid d-flex flex-wrap align-items-center justify-content-center" id="contgrid">
     </div>

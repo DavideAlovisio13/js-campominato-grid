@@ -47,9 +47,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  border-style: inset;
-  border: 1px solid white;
+  background-color: #7FFFD4;
+  border: 3px solid white;
   cursor: pointer;
 }
 /* utility  */
@@ -75,28 +74,4 @@ footer {
     background-image: url(../img/1570429633bomb.svg);
     background-size: cover;
 }
-.opacity-transition {
-    animation: opacity 1s linear;
-    animation: scale 1s linear;
-}
 
-@keyframes opacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes scale {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
