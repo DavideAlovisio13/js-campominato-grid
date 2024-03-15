@@ -26,16 +26,19 @@ const playGrid = document.createElement('div');
 divCont.appendChild(playGrid);
 console.log(divCont);
 
-function createNewCell (element) {
+function createNewCell(element) {
     const playCells = document.createElement('div');
-    const textCells = document.createElement('p');
-    playCells.className('')
+    playCells.className = ('playcell');
     playGrid.append(playCells);
-    playCells.append(textCells)
     return playCells;
 }
 
-for (let i = 0; i <= 100; i++) {
-    let newPlayCells = createNewCell(i + 1);
+for (let x = 0; x < 100; x++) {
+    let newPlayCells = createNewCell(x + 1);
+    const textCells = document.createElement('p');
+    let numbers = x + 1;
+    textCells.className = ('number')
+    newPlayCells.append(textCells);
+    textCells.append(numbers);
 }
 
