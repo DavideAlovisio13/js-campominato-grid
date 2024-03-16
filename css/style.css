@@ -28,13 +28,9 @@ footer {
   padding-right: 15px;
 }
 
-nav {
-    top: 0;
-}
 
-footer {
-    bottom: 0;
-}
+
+
 
 /* grid container */
 .grid {
@@ -71,7 +67,7 @@ footer {
 }
 
 .press_none {
-    background-image: url(../img/1570429633bomb.svg);
+    background-image: url(../img/DMW-ChainChomp.webp);
     background-size: cover;
 }
 
